@@ -1,3 +1,4 @@
+#Finnish social security number (SSN) is formatted as ddmmyy-nnnX, where ddmmyy indicates the date of birth, nnn indicates when you were born in that day (001 is the first person born), and X is called check mark. X is calculated by treating ddmmyynnn as a 9-digit number and divided by 31, and then use the remainder to find the check mark from the table 
 def calculate_check_mark(ssn):
     birth_date, birth_order, hyphen = map(int, ssn.split('-'))
     remainder = (birth_date + birth_order) % 31
